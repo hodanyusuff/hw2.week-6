@@ -1,0 +1,33 @@
+{
+  "name": "hw2week-6",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "passport": "^0.5.2",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"&& exit 1"
+  },
+  "respository": {
+    "type": "git",
+    "url": "git+https://github.com/hodanyusuff/hw2.week-6.git"
+  },
+  "keywords": [
+    "movie"
+  ],
+  "author": "Hodan Yusuf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hodanyusuff/hw2.week-6.git/issues"
+  },
+  "homepage": "https://github.com/hodanyusuff/hw2.week-6#readme"
+}
