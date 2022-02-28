@@ -33,7 +33,7 @@ function getJSONObjectForMovieRequirement(req) {
     }
     return json;
 }
-router.post('signup', function(req,res){
+router.post('/signup', function(req,res){
     if (!req.body.username || !req.body.password) {
         res.json({success: false, msg: 'please include both username and password to signup.'})
     } else {
@@ -45,7 +45,7 @@ router.post('signup', function(req,res){
         res.json({success: true, msg: 'successfully created new user.'})
     }
 });
-router.post('signon', function (req,res){
+router.post('/signin', function (req,res){
     var user = db.findOne(req.body.username);
     if(!user){
         res.status(401).send({success: false, msg: 'Authentication failed. user not found.'});
@@ -83,5 +83,5 @@ router.route('/movie')
     );
 
 app.use('/', router);
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 3000);
 module.exports = app; // for testing only
