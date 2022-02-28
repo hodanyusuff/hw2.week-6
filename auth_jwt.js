@@ -1,12 +1,12 @@
 var passport = require('passport');
-var jwtStrategy = require('passport-jwt').Strategy;
-var Extractjwt = require('passport-jwt').Extractjwt;
+var JwtStrategy = require('passport-jwt').Strategy;
+var ExtractJwt = require('passport-jwt').ExtractJwt;
 
 var opts = {};
-opts.jwtFromRequest = Extractjwt.fromAuthHeaderWithScheme("jwt");
-opts.secretOrkey = process.env.SECRET_KEY;
+opts.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme('jwt');
+opts.secretOrKey = process.env.SECRET_KEY;
 
-passport.use(new jwtStrategy(opts,
+passport.use(new JwtStrategy(opts,
     function(jwt_payload, done){
         var user = db.find(jwt_payload.id);
         if (user)
